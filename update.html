@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}{% endblock %}
+
+ <text>>Pad Database Updated Successfully!!!</text>
+<body>
+    <div class="form">
+            <form action="/update" method="POST">
+            Scoot Number: <input type="text" name="vehicle_id" id="vehicle_id"><br>
+              <text>Select <b>FRONT BRAKE PAD</b> value for this vehicle. </text><br>
+                <font size='5'>(Round down to nearest half millimeter, please)</font><br>
+                <select name="front_pads" id="front_pads">
+                    <option>(front pads)</option>
+                    <option value="3.5">3.5mm</option>
+                    <option value="3">3mm</option>
+                    <option value="2.5">2.5mm</option>
+                    <option value="2">2mm</option>
+                    <option value="1.5">1.5mm</option>
+                    <option value="1">1mm</option>
+                    <option value="0.5">.5mm</option>
+                    <option value="4">Replacing Pads</option>
+                </select> 
+                  
+                    <br><br>  
+        
+                <text>Select <b>REAR BRAKE PAD</b> value for this vehicle. </text><br>
+                <font size='5'>(Round down to nearest half millimeter, please)</font><br>        
+                <select name="rear_pads" id="rear_pads">
+                    <option>(rear pads)</option>
+                    <option value="3.5">3.5mm</option>
+                    <option value="3">3mm</option>
+                    <option value="2.5">2.5mm</option>
+                    <option value="2">2mm</option>
+                    <option value="1.5">1.5mm</option>
+                    <option value="1">1mm</option>
+                    <option value="0.5">.5mm</option>
+                    <option value="4">Replacing Pads</option>
+                </select> 
+                <br>
+                <input type="submit" value="Log Brake Pad Data" style="width:125px">
+              </form>
+            {% block body %}{% endblock %}
+            </body>
+    </html>
